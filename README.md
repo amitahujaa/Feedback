@@ -1,4 +1,4 @@
-# Feedback
+# Feedback APP
 
 This is standalone spring boot(embedded tomcat server and embedded H2 In-Memory Database) service and can be run directly using following command 
 
