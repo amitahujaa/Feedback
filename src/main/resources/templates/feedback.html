@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="intemplate">
+    <head>
+        <title>Feedback From</title>
+    </head>
+    <body>
+       
+        <div layout:fragment="content" class="row">
+       <div class="col-xs-5 col-md-5">
+           <a href="/errorPage" class="btn btn-primary"><i class="fas fa-plus-square"></i> Global Error</a>
+           <a href="/errorPageException" class="btn btn-primary"><i class="fas fa-plus-square"></i> Global Error for exception</a>
+       </div>
+            <div class="col-xs-10 col-md-10">
+                            
+                 
+                <h1>Feedback Form</h1>
+		    <form action="#" th:action="@{/feedback}" th:object="${feedback}" method="post">
+		    	<p>Auto Generated Message ID: <input type="text" th:field="*{id}" required  placeholder="Auto Generated ID"/></p>
+		    	<p>Email ID: <input type="email" th:field="*{email}" required  placeholder="Email Id"/></p>
+		        <p>Message: <input type="text" th:field="*{content}" required placeholder ="Message " /></p>
+		        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+		    </form>
+            </div>
+        </div>
+    </body>
+</html>
